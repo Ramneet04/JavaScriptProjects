@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #10131c;
+}
+.container{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #212532;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     transition: .5s;
+    transition-delay: .8s; 
+}
+span{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50%;
+    transition: all .5s;
+}
+.s1{
+    top: 20px;
+    left: 15px;
+}
+.s2{
+    top: 20px;
+    right: 15px;
+}
+.s3{
+    top: 20px;
+}
+.s4{
+    bottom: 20px;
+    left: 15px;
+}
+.s5{
+    bottom: 20px;
+    right: 15px;
+}
+.s6{
+    bottom: 20px;
+}
+.s7{
+    left: 15px;
+}
+.s8{
+    right: 15px;
+}
+span i{
+    font-size: 0rem;
+}
+.container.active{
+    height: 200px;
+    width: 200px;   
+}
+.container.active span{
+    width: 36px;
+    height: 36px;
+    background: #333849;
+    color: #fff;
+}
+.container.active i{
+    font-size: 1.2rem;
+}
+.container.container.active span:hover i{
+    color: #2dfc52;
+    filter: drop-shadow(0 0 1px #2dfc52);
+     /* drop-shadow(0 0 5px #2dfc52) */
+     /* drop-shadow(0 0 15px #2dfc52); */
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Share Modal</title>
+    <link rel="shortcut icon" href="Favicon.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="card">
+            <img src="myimage2.jpg" height="150px" width="150px" style="border:2px solid #ffffff30; border-radius: 100%;" alt="">
+            <h2 class="username">Ramneet Singh</h2>
+            <div class="FullStackText">Full Stack Web, Developer</div>
+            <div class="Btn">
+                <button onclick="openModal()" class="ShareBtn">
+                    <i class="fa-solid fa-share"></i>
+                    <p>share my profile</p>
+                </button>
+                    
+                    <button class="FollowBtn">Follow Me</button>
+            </div>
+        </div>
+        <!-- Modal Component  -->
+        <div class="modal">
+            <div class="modalHeader">
+                <h2>Share My Profile</h2>
+                <i onclick="closeModal()" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="line"></div>
+            <div class="modalSection">
+                <h3 class="modalSectionH3">Share this via</h3>
+                <div class="Icon-Section">
+                    <a href=""><i id="insta" class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ramneet-singh-831169295"><i id="linkedin" class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i id="whatsapp" class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/Ramneet04"><i id="git" class="fa-brands fa-github"></i></a>
+                    <a href="https://leetcode.com/RamneetSingh/"><i id="leetCode" class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" onclick="closeModal()"></div>
+    </div>
+
+
+</body>
+</html>

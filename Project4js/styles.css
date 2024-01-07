@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+}
+.card{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    color: #fff;
+    /*100 from top auto from left and right  */
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #6e6e6e;
+    padding: 10px 35px;
+    border-radius: 30px;
+    height: 50px;
+    font-size: 1.1rem;
+    /* If an element has flex: 1, it signifies that the width of all other elements will be the same as their content, but the element with flex: 1 will be given the remaining full space. */
+    /* flex: 1; */
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background:#ebfffc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.icon{
+    width: 16px;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -7px;
+}
+.details{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+}
+.left{
+    display: flex;
+    align-items: center;
+    /* 50 percent wala text left me shilft ho gya */
+    text-align: left;
+}
+.left img{
+    width: 55px;
+    margin-right: 10px;
+}
+.right{
+    display: flex;
+    align-items: center;
+    /* 50 percent wala text left me shilft ho gya */
+    text-align: left;
+}
+.right img{
+    width: 55px;
+    margin-right: 10px;
+}
+.humidity-text, .wind-text{
+    font-size: 28px;
+    margin-top: 30px;
+}
+.humidity-text2 , .wind-text2{
+    margin-top: 10px;
+}

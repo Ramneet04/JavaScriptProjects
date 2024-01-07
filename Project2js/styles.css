@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+body{
+    background-color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.circle1{
+  position: fixed;
+  top: 5%;
+  left: 30%;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #d84869;
+  background: linear-gradient(-25deg, #d84869, #f46641);
+  animation: circleAnimation1 5s linear infinite;
+}
+.circle2{
+    position: fixed;
+    bottom: 5%;
+    right: 30%;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: circleAnimation2 5s linear infinite;
+}
+@keyframes circleAnimation1 {
+    50%{
+        left: 33%;
+        top: 4%;
+        scale: 1.11;
+    }
+}
+
+@keyframes circleAnimation2 {
+    50%{
+        right: 33%;
+        bottom: 4%;
+        scale: 1.11;
+    }
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* z-index: -10; */
+}
+.card{
+    /* scale: 0; */
+    position: absolute;
+    height: 400px;
+    padding: 20px 50px;
+    border: 2px solid #ffffff30;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(15px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 4px;
+}
+.Btn{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.ShareBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 12px;
+    background-color: #ffffff00;
+    border: 2px solid #ffffffb9;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    color: #ffffffb9;
+}
+.FollowBtn{
+    text-transform: capitalize;
+    border: 2px solid #ffffffb9;
+    border-radius: 6px;
+    pad: 9px 12px;
+    width: 100px;
+    font-size: 0.9rem;
+    color: #ffffffb9;
+}
+.username{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.FullStackText{
+    opacity: 70%;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.modal{
+    scale: 0;
+    z-index: 1;
+    color: white;
+    width: 400px;
+    border: 2px solid #ffffff59;
+    background: #00000088;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0;
+}
+.modalHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.modalSection{
+    display: flex;
+    flex-direction: column;
+}
+.modalSectionH3{
+    font-size: 0.8rem;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.line{
+    background-color: rgb(82, 77, 77);
+    height: 0.1rem;
+    width: 95%;
+    margin: auto;
+}
+.Icon-Section{
+    display: flex;
+    justify-content: space-around;
+    padding: 18px;
+    font-size:1.6rem;
+    text-decoration: none;
+}
+#insta{
+    color: #cb2770;
+    border-radius: 50%;
+}
+#linkedin{
+    color: #0e69a1f1;
+    border-radius: 50%;
+}
+#whatsapp{
+   color:#2fe664;
+    border-radius: 50%;
+}
+#git{
+    border-radius: 50%;
+}
+#leetCode{
+    color: rgb(228, 196, 14);
+    border-radius: 50%;
+}
+.active{
+scale: 1; 
+ }
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: #5f5f5f83;
+    pointer-events: none;
+    transition:all 0.4s ease-in-out;
+    transition-duration: 0;
+}
+.overlay-active{
+    opacity: 1;
+    pointer-events: initial;
+} 

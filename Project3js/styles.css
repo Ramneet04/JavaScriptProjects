@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.wrapper{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%); */
+    background-color: rgb(66, 1, 66);
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+}
+.container{
+    max-width: 450px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Mainheading{
+    color: rgb(2, 16, 33);
+    opacity: 90%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    user-select: none;
+}
+.password-display{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(66, 1, 66);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 0.6rem;
+    box-shadow: 3px 3px 4px rgb(255, 77, 0);
+}
+.InputFeild::placeholder{
+    color: rgb(244, 157, 7);
+    /* text-transform: uppercase; */
+}
+.InputFeild{
+    width: 90%;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    letter-spacing: 1.8px;
+    padding-right: 3rem;
+}
+.input-container{
+    border-radius: 1rem;
+    background-color: rgb(66, 1, 66);
+    box-shadow: 3px 3px 4px rgb(255, 77, 0);
+    margin: 1rem;
+    padding: 0.6rem;
+    max-width: 450px;
+}
+.lengthAndNumber{
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    align-items: center;
+}
+.lengthAndNumber p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+.lengthAndNumber h2{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.Strength-Section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+.Strength-Section div{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+.Strength-Section h3{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.Generate-button{
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: linear-gradient(to right,white, orange,white);
+    color: black;
+    border: 3px solid rgb(255, 42, 0);
+    margin-top: 1rem;
+    padding: 0.8rem 0;
+    border-radius: 1rem;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    margin-left: 2rem;
+    transition: all 200ms ease-in-out;
+}
+.Generate-button:active{
+    transform: scale(0.95);
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 0.8rem;
+}
+.check input{
+    /* DEFAULT BROWER STYLE NONE I DONT WANT  */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(150, 97, 6);
+    cursor: pointer;
+    /* for absolute nearest enchestor should be non-static  */
+    position: relative;
+    border-radius: 0.35rem;
+}
+.check input:checked{
+    background-color: black;
+}
+.check input:checked::before{
+    content: '✓';
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 600;
+    top: -10%;
+    left: 20%;
+    color: aqua;
+}
+.check label{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+}
+.copied{
+    color: aqua;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+.copyingandicon{
+    /* position: relative; */
+    /* display: flex;
+    flex-direction: column;
+    gap: 5px; */
+    background-color: transparent;
+    border: none;
+}
+.message{
+    position: absolute;
+    color: aqua;
+    /* opacity: 0; */
+    transform-origin: bottom;
+    transform: scale(0);
+    margin-bottom: 1rem;
+    background-color: purple;
+    border-radius: 10px;
+    border: 2px solid purple;
+    /* write in percentage */
+    top: 0%;
+    /* transform-origin: bottom; */
+    font-size: 1rem;
+    transition: all 250ms ease-in-out;
+}
+.message.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.Slider{
+    margin-left: 1rem;
+    appearance: none;
+    -webkit-slider-thumb: 25px;
+    width: 90%;
+    height: 0.8rem;
+    cursor: pointer;
+    background-color: rgb(79, 31, 79);
+    border-radius: 2rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    /* ye image hai  */
+    background-image: linear-gradient(to right, red, orange);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
+.Slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(to right, yellow, orange);
+    box-shadow: yellow;
+    transition: all 100ms ease-in;
+}
+.Slider:focus{
+    outline: 3px solid white;
+}
+.Slider::-webkit-slider-thumb:hover{
+    outline: 2px solid white;
+    background: linear-gradient(to right, red, orange,red);
+}
